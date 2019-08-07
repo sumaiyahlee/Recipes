@@ -4,15 +4,18 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel = "stylesheet" href = "/styles/recipe.css">
+    <link href="https://fonts.googleapis.com/css?family=Beth+Ellen&display=swap" rel="stylesheet">
 </head>
 <body>
-    <p class = "header">Here are your recipes.</p>
-    <section>
+    <p class = "header"><span>Recipe Engine</span></p>
+    <section> 
             {% for result in results.results %}
             <section class="result">
               <div class =  "image"><img src="{{ result.thumbnail }}"></div>
-              <div class = "title">{{ result.title }}</div>
-              <div class = "ingredients">{{ result.ingredients }}</div>
+              <div>
+                <div class = "title">{{ result.title }}</div>
+                <div class = "ingredients">{{ result.ingredients }}</div>
+              </div>
             </section>
           {% endfor %}
     </section>
